@@ -1,0 +1,11 @@
+{
+    "modules": {
+        "peewee": [
+            "coleifer/peewee",
+            "peewee"
+        ]
+    },
+    "programms": {
+        "chat-app": "Speziwelt"
+    }
+}
