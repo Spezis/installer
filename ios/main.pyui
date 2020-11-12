@@ -10,15 +10,15 @@
         "attributes" : {
           "flex" : "",
           "data_source_items" : "Row 1\nRow 2\nRow 3",
-          "name" : "tableview1",
+          "row_height" : 44,
           "frame" : "{{170, 170}, {200, 200}}",
           "uuid" : "6C3C15D0-BF86-41E0-9E9E-F86C643C09BC",
           "data_source_number_of_lines" : 1,
           "class" : "TableView",
+          "data_source_delete_enabled" : true,
           "data_source_font_size" : 18,
           "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
-          "row_height" : 44,
-          "data_source_delete_enabled" : true
+          "name" : "tableview1"
         },
         "selected" : false
       },
@@ -29,11 +29,11 @@
         "frame" : "{{0, 0}, {200, 50}}",
         "class" : "SegmentedControl",
         "attributes" : {
-          "name" : "segmentedcontrol1",
+          "class" : "SegmentedControl",
           "frame" : "{{210, 256}, {120, 29}}",
           "uuid" : "A2EFFA06-11BE-4F4B-9695-A9209781C133",
-          "class" : "SegmentedControl",
           "segments" : "Programme|Module",
+          "name" : "segmentedcontrol1",
           "flex" : ""
         },
         "selected" : false
@@ -42,7 +42,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{208, 130}, {332, 410}}",
+        "frame" : "{{208, 138}, {332, 402}}",
         "class" : "ImageView",
         "attributes" : {
           "frame" : "{{220, 220}, {100, 100}}",
@@ -110,16 +110,16 @@
         "frame" : "{{208, 98}, {332, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "programminfo",
+          "font_size" : 18,
           "frame" : "{{195, 254}, {150, 32}}",
           "uuid" : "DC712425-D04D-4201-A40F-CD0CCD5CABA8",
           "class" : "Label",
           "alignment" : "left",
-          "text" : "Label",
-          "font_size" : 18,
+          "text" : "",
+          "name" : "versioninfo",
           "font_name" : "<System>"
         },
-        "selected" : true
+        "selected" : false
       }
     ],
     "frame" : "{{0, 0}, {540, 540}}",

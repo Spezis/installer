@@ -1,6 +1,7 @@
 import ui
 import requests
 import json
+import sys
 
 BACKUP_LIST = '''{
     "modules": {
@@ -10,16 +11,23 @@ BACKUP_LIST = '''{
         ]
     },
     "programms": {
-        "chat-app": ["Speziwelt",[['desktop/main.py'],['ios/main.py']]],
-        "musik": "Musikdatenbank"
+        "chat-app": ["Speziwelt",[["desktop/main.py"],["ios/main.py"],["generelledateien"]]],
+        "musik": ["Musikdatenbank",[["desktopdateien"],["iosdateien"],["generelledateien"]]]
     }
 }'''
 
 
 class View(ui.View):
 	def did_load(self):
-		r = requests.get('https://raw.githubusercontent.com/jensholzberger/installer/master/apps.json')
-		liste = json.loads(r.content.decode().strip('\n'))
+		try:
+			r = requests.get(
+				'https://raw.githubusercontent.com/jensholzberger/installer/master/apps.json'
+			)
+			liste = json.loads(r.content.decode().strip('\n'))
+		except Exception:
+			self[
+				'errortext'].text = 'Paketliste konnte nicht geladen werden (kein Internet).'
+			liste = json.loads(BACKUP_LIST.strip('\n'))
 		self.modules = liste['modules']
 		self.programms = liste['programms']
 		list1 = [i[0] for i in self.programms.values()]
@@ -38,6 +46,24 @@ class View(ui.View):
 			self['tableview1'].data_source = ui.ListDataSource(items=list1)
 			self['tableview1'].reload()
 
+def check_version():
+	try:
+		r = requests.get('https://raw.githubusercontent.com/jensholzberger/installer/master/apps.json')
+		liste = json.loads(r.content.decode().strip('\n'))
+	except Exception:
+		#update failed
+		#->try running startup scripts
+		try:
+			import startup
+		except ImportError:
+			#expected during testing or no startup programm existing
+			sys.exit(0)
+		
 
-v = ui.load_view()
+if __name__ == '__main__':
+	#executed by user
+	v = ui.load_view()
+else:
+	#autostart folder (check for updates and install overdue packets)
+	pass
 
