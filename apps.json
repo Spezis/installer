@@ -2,7 +2,7 @@
     "modules": {
         "peewee": [
             "coleifer/peewee",
-            "peewee"
+            ["peewee.py"]
         ]
     },
     "programms": {

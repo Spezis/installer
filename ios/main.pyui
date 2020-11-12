@@ -5,20 +5,20 @@
         "nodes" : [
 
         ],
-        "frame" : "{{0, 58}, {200, 482}}",
+        "frame" : "{{0, 98}, {200, 442}}",
         "class" : "TableView",
         "attributes" : {
           "flex" : "",
           "data_source_items" : "Row 1\nRow 2\nRow 3",
           "name" : "tableview1",
           "frame" : "{{170, 170}, {200, 200}}",
+          "uuid" : "6C3C15D0-BF86-41E0-9E9E-F86C643C09BC",
           "data_source_number_of_lines" : 1,
           "class" : "TableView",
-          "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
-          "data_source_delete_enabled" : true,
           "data_source_font_size" : 18,
+          "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
           "row_height" : 44,
-          "uuid" : "6C3C15D0-BF86-41E0-9E9E-F86C643C09BC"
+          "data_source_delete_enabled" : true
         },
         "selected" : false
       },
@@ -29,12 +29,95 @@
         "frame" : "{{0, 0}, {200, 50}}",
         "class" : "SegmentedControl",
         "attributes" : {
-          "uuid" : "A2EFFA06-11BE-4F4B-9695-A9209781C133",
-          "frame" : "{{210, 256}, {120, 29}}",
           "name" : "segmentedcontrol1",
+          "frame" : "{{210, 256}, {120, 29}}",
+          "uuid" : "A2EFFA06-11BE-4F4B-9695-A9209781C133",
           "class" : "SegmentedControl",
           "segments" : "Programme|Module",
           "flex" : ""
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{208, 130}, {332, 410}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "frame" : "{{220, 220}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "imageview1",
+          "uuid" : "4EA901FA-A354-4D09-91A5-E51FAB8F7CAC"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{208, 0}, {162, 50}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "DC193566-AEEC-4799-9648-678C8242A53F",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "Installieren",
+          "class" : "Button",
+          "name" : "button1",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{378, 0}, {162, 50}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "20AF4E3A-7A14-4660-B4A8-BFF30F203380",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "Updaten",
+          "class" : "Button",
+          "name" : "button2",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 58}, {540, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "errortext",
+          "text_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "D333D7C9-A1CE-46E4-85C0-E06F6D4BF6CE",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "",
+          "font_size" : 18,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{208, 98}, {332, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "programminfo",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "DC712425-D04D-4201-A40F-CD0CCD5CABA8",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Label",
+          "font_size" : 18,
+          "font_name" : "<System>"
         },
         "selected" : true
       }
@@ -42,12 +125,13 @@
     "frame" : "{{0, 0}, {540, 540}}",
     "class" : "View",
     "attributes" : {
-      "custom_class" : "View",
+      "flex" : "",
       "enabled" : true,
-      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "custom_class" : "View",
       "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
-      "flex" : ""
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : "Installer"
     },
     "selected" : false
   }
