@@ -5,8 +5,11 @@ import json
 
 class View(ui.View):
 	def did_load(self):
-		installer_liste = requests.get('https://raw.githubusercontent.com/jensholzberger/installer/master/apps.json')
-		print(installer_liste.content)
+		r = requests.get('https://raw.githubusercontent.com/jensholzberger/installer/master/apps.json')
+		liste =json.loads(r.content.decode().strip('\n'))
+		self.modules=liste['modules']
+		self.programms=liste['programms']
+		print([i for i in self.programms.values()])
 		self.present('sheet')
 
 	def select_category(self, sender):
@@ -14,9 +17,3 @@ class View(ui.View):
 
 
 v = ui.load_view()
-
-apps={'modules':{'peewee':['coleifer/peewee','peewee']},'programms':{'chat-app':'Speziwelt'}}
-
-with open('apps.json', 'w') as fp:
-	json.dump(apps, fp,indent=4)
-

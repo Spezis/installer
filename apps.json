@@ -6,7 +6,7 @@
         ]
     },
     "programms": {
-        "chat-app": "Speziwelt"
+        "chat-app": ["Speziwelt",[['desktop/main.py'],['ios/main.py']]],
         "musik": "Musikdatenbank"
     }
 }
