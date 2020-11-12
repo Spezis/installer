@@ -2,6 +2,7 @@ import ui
 import requests
 import json
 import sys
+import os
 
 BACKUP_LIST = '''{
     "modules": {
@@ -59,11 +60,11 @@ def check_version():
 			#expected during testing or no startup programm existing
 			sys.exit(0)
 		
-
+print(__file__)
 if __name__ == '__main__':
 	#executed by user
 	v = ui.load_view()
 else:
 	#autostart folder (check for updates and install overdue packets)
-	pass
+	check_version()
 
