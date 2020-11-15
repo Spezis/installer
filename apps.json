@@ -1,12 +1,5 @@
 {
-    "modules": {
-        "peewee": [
-            "coleifer/peewee",
-            ["peewee.py"]
-        ]
-    },
-    "programms": {
-        "chat-app": ["Speziwelt","1.0",[["desktop/main.py"],["ios/main.py"],["generelledateien"]]],
-        "musik": ["Musikdatenbank","1.0",[["desktopdateien"],["iosdateien"],["generelledateien"]]]
-    }
+    "peewee":[]
+    "chat-app":[]
+    "musik":[]
 }
